@@ -16,23 +16,15 @@
     
 ## Usage
     Basic Example
-    from swos_connector.connector import SWOSConnector
-
-    def get_system(url,username,password):
-
-        with SWOSConnector(url, username, password) as swos:
-
-            system_info = swos.get_system_info()
-
-            return system_info
+    from swos_connector import SWOSConnector
 
     url = 'http://192.168.88.1'
-
     username = 'admin'
-
     password = 'password'
 
-    print(get_system(url,username,password))
+    with SWOSConnector(url, username, password) as swos:
+        system_info = swos.get_system_info()
+        print(system_info)
 # SWOSConnector API Functions
 
 ## System Information
@@ -86,22 +78,11 @@
 
 ## Host Information
 - **`get_mikrotik_hosts()`**: Retrieve host information from the SwitchOS device, including IP and MAC addresses.
-## Exceptions
-MikrotikConnectionError:
 
-    Raised when there is an issue connecting to the Mikrotik device.
+### Instructions for Use:
 
-## License
+1. **Replace the placeholder imports** like `from swos_connector import SWOSConnector` with the actual import path for your project.
+2. **Add more details** or modify the content based on specific usage or setup steps required for `SWOSConnector`.
+3. **Update the License section** if your project uses a different license or add the `LICENSE` file if you haven't already.
 
-     This project is licensed under the GNU GENERAL PUBLIC LICENSE V3. See the LICENSE file for details.
-## Contributing
-
-     We welcome contributions to enhance the functionality of this SwitchOS_Connector. Please fork the repository and create a pull request with your improvements. or open a issue to add improvements in code
-## Author
-
-     petrunetworking (Network Enginner)
-
-## Acknowledgements
-
-    Developed using the REST API connections.
-    Inspired by the need for robust network automation tools.
+This README should give users clear instructions on how to use your `SWOSConnector` class and understand its fun
